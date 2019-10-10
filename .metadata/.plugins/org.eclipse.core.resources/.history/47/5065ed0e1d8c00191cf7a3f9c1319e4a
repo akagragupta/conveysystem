@@ -1,0 +1,86 @@
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+import java.io.File;
+
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.tomcat.util.http.fileupload.FileItem;
+import org.apache.tomcat.util.http.fileupload.FileItemFactory;
+import org.apache.tomcat.util.http.fileupload.FileUploadException;
+import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
+import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
+/**
+ * Servlet implementation class Signupservlet
+ */
+@WebServlet("/Signupservlet")
+public class Signupservlet extends HttpServlet {
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+	{
+		PrintWriter out = response.getWriter();
+		   
+		  if(!ServletFileUpload.isMultipartContent(request)){
+		   out.println("Nothing to upload");
+		   return; 
+		  }
+		  FileItemFactory itemfactory = new DiskFileItemFactory(); 
+		  ServletFileUpload upload = new ServletFileUpload(itemfactory);
+		  try{
+		   List<fileitem>  items = upload.parseRequest(request);
+		   for(FileItem item:items){
+		     
+		    String contentType = item.getContentType();
+		    if(!contentType.equals("image/png")){
+		     out.println("only png format <span class="intexthighlight" style="color: rgb(26, 117, 255); line-height: 19.2px;" phasehl="metakeyword:" id="QxTcw">image</span> files supported");
+		     continue;
+		    }
+		    File uploadDir = new File("F:\\UploadedFiles");
+		    File file = File.createTempFile("img",".png",uploadDir);
+		    item.write(file);
+		 
+		    out.println("File Saved Successfully");
+		   }
+		  }
+		  catch(FileUploadException e){
+		    
+		   out.println("upload fail");
+		  }
+		  catch(Exception ex){
+		    
+		   out.println("can't save");
+		  }
+		
+		
+		
+		
+		
+		String name,address,college,hostel,room,postal,phone,payment_methods,passwords;
+		Blob image;
+		name=request.getParameter("name");
+		
+		address=request.getParameter("address");
+		college=request.getParameter("college");
+		hostel=request.getParameter("hostel");
+		room=request.getParameter("room");
+		postal=request.getParameter("postal");
+		phone=request.getParameter("phone");
+		payment_methods=request.getParameter("payment-methods");
+		passwords=request.getParameter("password");
+		Sql ob=new Sql();
+		if(ob.adduser(name,address,college,hostel,room,postal,phone,payment_methods,passwords))
+		{
+			System.out.println("user is succesfully added");
+		}
+		else {
+			System.out.println("user is failed to signup");
+		}
+	}
+
+}

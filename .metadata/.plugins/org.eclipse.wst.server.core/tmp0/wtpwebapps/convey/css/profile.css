@@ -1,0 +1,35 @@
+@charset "ISO-8859-1";
+
+.box {
+    width: 100%;
+    height: 320px;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.dp{
+	position: relative;
+	border-radius: 50%;
+	top:5px;
+	left:5px;
+}
+
+.place{
+	padding-top:50px;
+	position: relative;
+	text-align: left;
+	width:500px;
+}
+
+.row:hover{
+  background-color: grey;
+}
+
+.fixedbutton {
+    position: fixed;
+    bottom:5px;
+    right: 5px; 
+}

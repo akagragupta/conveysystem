@@ -1,0 +1,54 @@
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+import java.io.File;
+
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.tomcat.util.http.fileupload.FileItem;
+import org.apache.tomcat.util.http.fileupload.FileItemFactory;
+import org.apache.tomcat.util.http.fileupload.FileUploadException;
+import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
+import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
+/**
+ * Servlet implementation class Signupservlet
+ */
+@WebServlet("/Signupservlet")
+public class Signupservlet extends HttpServlet {
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+	{
+		
+		
+		
+		
+		
+		String name,address,college,hostel,room,postal,phone,payment_methods,passwords;
+
+		name=request.getParameter("name");
+		
+		address=request.getParameter("address");
+		college=request.getParameter("college");
+		hostel=request.getParameter("hostel");
+		room=request.getParameter("room");
+		postal=request.getParameter("postal");
+		phone=request.getParameter("phone");
+		payment_methods=request.getParameter("payment-methods");
+		passwords=request.getParameter("password");
+		Sql ob=new Sql();
+		if(ob.adduser(name,address,college,hostel,room,postal,phone,payment_methods,passwords))
+		{
+			System.out.println("user is succesfully added");
+		}
+		else {
+			System.out.println("user is failed to signup");
+		}
+	}
+
+}

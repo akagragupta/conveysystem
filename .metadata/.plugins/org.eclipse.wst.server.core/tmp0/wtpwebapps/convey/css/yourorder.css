@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+body{
+	height: 1000px;
+	background-image: linear-gradient(white, #0084ff) ;
+}
+.dis-butt{
+	background-color:orange !important;
+}
+
+.abl-butt{
+	background-color:#0084ff !important;
+	
+}

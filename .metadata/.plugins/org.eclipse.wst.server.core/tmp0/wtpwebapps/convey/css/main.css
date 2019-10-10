@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+body{
+	background-image: linear-gradient(white #0084ff);
+}
+
+.lable_width{
+	width:200px;
+	
+}
+
+.nav-css{
+	background-color:#0084ff;
+}
+
+.nav-drop:hover{
+	background-color:#0084ff !important;
+}
+
+.popup-btn{
+	transition:0.3s;
+}
+
+.popup-btn:hover{
+	background-color:orange;
+}

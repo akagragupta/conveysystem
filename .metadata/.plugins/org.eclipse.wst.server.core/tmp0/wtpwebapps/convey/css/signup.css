@@ -1,0 +1,40 @@
+@charset "ISO-8859-1";
+body{
+	background-color:#0084ff;
+}
+.signup-div{
+	width:75%;
+	margin: auto;
+  	border: 3px solid green;
+  	padding: 10px;
+  	margin-top:8%;
+  	color:white;
+}
+
+.hero-image {
+  background-image: url("https://bit.ly/2LGGOH0");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 25px;
+  border: 2px solid black;
+}
+
+.but{
+	transition: 0.3s;
+	backgound-color:white;
+	border-radius: 50% !important;
+	margin-left:35%;
+}
+
+.but:hover{
+	transition: 1s;
+	color:orange;
+}
+
+input{
+	border-radius: 42%;
+}

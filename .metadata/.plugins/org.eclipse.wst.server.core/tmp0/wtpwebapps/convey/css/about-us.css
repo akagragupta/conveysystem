@@ -1,0 +1,72 @@
+@charset "ISO-8859-1";
+.parallax {
+  /* The image used */
+  background-image: url("https://bit.ly/2II2lOP");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-effect{
+  color:white;
+  position: absolute;
+  z-index: 1000;
+  width:100%;
+  margin:auto;
+  text-align: center;
+  margin-top: 15%;
+  font-weight:bold;
+}
+
+.img-about-devlopper{
+	border-radius: 50%;
+	width:250px;
+	text-align:center;
+	position:relative;
+	top:25px;
+}
+
+button{
+	width:100px !important;
+	
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.jio{
+	text-align:center;
+}
+
+.para{
+	
+}

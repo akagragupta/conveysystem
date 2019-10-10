@@ -1,0 +1,15 @@
+127.0.0.1 - - [16/Jun/2019:17:12:11 +0530] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:17:12:19 +0530] "GET /convey/login.jsp HTTP/1.1" 200 798
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:17:12:19 +0530] "GET /convey/css/login.css HTTP/1.1" 404 1056
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:17:12:19 +0530] "GET /favicon.ico HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:17:12:37 +0530] "GET /convey/loginservlet1?username=akagra&password=akagra HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jun/2019:23:04:30 +0530] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:23:04:31 +0530] "GET /convey/login.jsp HTTP/1.1" 200 798
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:23:04:31 +0530] "GET /convey/css/login.css HTTP/1.1" 404 1056
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:23:04:31 +0530] "GET /favicon.ico HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:23:04:45 +0530] "GET /convey/loginservlet1?username=akagra&password=akagra HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:23:04:47 +0530] "GET /convey/main.jsp HTTP/1.1" 200 1265
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:23:07:11 +0530] "GET /convey/main.jsp HTTP/1.1" 200 1223
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:23:24:47 +0530] "GET /convey/main.jsp HTTP/1.1" 200 1223
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:23:27:02 +0530] "GET /convey/offer.jsp HTTP/1.1" 200 2018
+0:0:0:0:0:0:0:1 - - [16/Jun/2019:23:27:02 +0530] "GET /convey/... HTTP/1.1" 404 1046

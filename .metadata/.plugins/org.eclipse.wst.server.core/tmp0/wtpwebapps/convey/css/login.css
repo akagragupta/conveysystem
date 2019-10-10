@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+.body{
+	background-color:#0084ff;
+	
+}
+
+.login-div{
+	background-color: white;
+	border-style: bold;
+	width:30%;
+	margin-top:15%;
+	border-radius: 50%;
+}
+
+.butt-css{
+	width:100%;
+	border-radius: 50%;
+  	transition: 0.3s;
+  	backgound-color:white;
+ }
+
+#input{
+	width:100%;
+	border-radius: 50%;
+}
+
+.butt-css:hover{
+	color:orange;
+	opacity:1;
+}
